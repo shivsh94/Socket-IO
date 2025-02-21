@@ -27,6 +27,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('A user connected', socket.id);
+
+    socket.emit('welcome', 'Welcome to the server!');
+
 });
 
 

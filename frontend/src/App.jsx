@@ -10,6 +10,9 @@ const App = () => {
     socket.on('connect', () => {
       console.log('Connected to the server');
     });
+    socket.on('welcome', (message) => {
+      console.log(message);
+    });
   }
   , []);
 
