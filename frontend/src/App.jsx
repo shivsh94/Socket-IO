@@ -1,27 +1,11 @@
-import React, { use } from 'react';
-import {io} from 'socket.io-client';
-import { useEffect } from 'react';
+import React from 'react';
+import Chats from './components/Chats';
+
 
 const App = () => {
 
-  const socket = io('http://localhost:3000');
-
-  useEffect(() => {
-    socket.on('connect', () => {
-      console.log('Connected to the server');
-    });
-    socket.on('welcome', (message) => {
-      console.log(message);
-    });
-  }
-  , []);
-
-
-
   return (
-    <div>
-      
-    </div>
+     <Chats/>
   );
 }
 
